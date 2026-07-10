@@ -16,8 +16,6 @@ full apparatus never beats a two-layer MLP. The paper distills a four-test
 diagnostic protocol for auditing claimed implicit computation in DEQs,
 looped, and recurrent-depth models.
 
-![Two regimes](figures/fig4_two_regimes.png)
-
 ## Repository contents
 
 ```
