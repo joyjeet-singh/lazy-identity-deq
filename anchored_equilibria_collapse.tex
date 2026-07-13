@@ -72,12 +72,15 @@ Colab GPU; code, raw logs, and analysis scripts are released.
 Implicit and recurrent depth is one of the field's recurring hopes for
 reasoning: rather than fixing computation at a static layer count, let
 the model iterate --- a deep equilibrium model (DEQ) solving for a
-fixed point, a looped or recurrent-depth transformer unrolling until
-done --- and let harder inputs consume more computation. % TODO cite: Bai et al. 2019 (DEQ); ACT/PonderNet; Huginn/Ouro/TRM.
+fixed point~\citep{bai2019deep}, a looped or recurrent-depth
+transformer unrolling until done~\citep{dehghani2019universal,
+geiping2025scaling} --- and let harder inputs consume more
+computation~\citep{graves2016adaptive}.
 Physics-structured parameterizations make the proposal more
 attractive still: port-Hamiltonian and symplectic constraints promise
 stable, energy-controlled latent dynamics on which an implicit solve
-can safely iterate. % TODO cite: HNN, SympNets, port-Hamiltonian learning.
+can safely iterate~\citep{greydanus2019hamiltonian, jin2020sympnets,
+desai2021port}.
 The promise is concrete and checkable: the solved equilibrium should
 carry the \emph{result} of iterative inference, and solver effort
 should track problem difficulty.
@@ -641,7 +644,6 @@ ours.
 \paragraph{Reproducibility.} All experiments run on a single free
 Colab GPU (per-run cost: $\sim$2--6 minutes training). Code, configs,
 seeds, and raw logs: \url{https://github.com/joyjeet-singh/lazy-identity-deq}
-% ^ create the repo under this name (or update the URL) before submission.
 
 \bibliographystyle{unsrtnat}
 \bibliography{refs}
